@@ -1,17 +1,19 @@
 # Secure Task
 
-### Wellcome to Secure task App. Please, follow the instruction to access this project
+#### Wellcome to Secure task App.
 
 ##### [RELEASE DOWNLOAD](https://github.com/eldirb21/Movies/releases/tag/v1)
 
 ## Features
 
+```sh
 - Auth
 - Task List
 - Task Add
 - Task Edit
 - Task Views
 - Task Delete
+```
 
 ## Libraries
 
@@ -45,24 +47,34 @@ $ npm run package-install
 
 #### 2. Simulate for iOS
 
+```sh
 $ npm run ios
+```
 
 #### 3. Simulate for Android
 
+```sh
 $ npm run android
+```
 
-#### Clean Android
+#### 4 Clean Android
 
+```sh
 $ npm run clean-android
+```
 
-#### Release Android
+#### 5 Release Android
 
+```sh
 $ npm run android-releaseapk
+```
 
 ## Test Sources
 
+```sh
 $ npm run test
-or
+
 $ npm run test **tests**/folder_name
-or
+
 $ npm run test **tests**/folder_name/file_name.test.js
+```
