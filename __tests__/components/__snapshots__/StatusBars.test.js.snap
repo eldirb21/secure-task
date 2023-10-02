@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusBars component renders StatusBars component correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "height": null,
+      },
+      {
+        "backgroundColor": "blue",
+      },
+    ]
+  }
+>
+  <RCTSafeAreaView />
+</View>
+`;

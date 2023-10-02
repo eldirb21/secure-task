@@ -1,0 +1,20 @@
+module.exports = {
+  root: true,
+  extends: '@react-native',
+  plugins: ['react', 'react-native', 'prettier'],
+  rules: {
+    'no-console': 0,
+    'no-unused-vars': 1,
+    'babel/semi': 1,
+    // 'import/no-unresolved': 'off',
+    // 'import/no-extraneous-dependencies': 'off',
+    // 'import/order': 'off',
+    // 'import/no-duplicates': 'off',
+    // 'import/first': 'off',
+    // 'import/prefer-default-export': 'off',
+    // 'import/newline-after-import': 'off',
+    // 'import/no-named-default': 'off',
+    // 'import/arrow-body-style': 'off',
+    // 'import/no-inline-styles': 'off',
+  },
+};
