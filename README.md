@@ -2,7 +2,7 @@
 
 #### Wellcome to Secure task App.
 
-##### [RELEASE DOWNLOAD](https://github.com/eldirb21/Movies/releases/tag/v1)
+##### [RELEASE DOWNLOAD](https://github.com/eldirb21/secure-task/releases)
 
 ## Features
 
