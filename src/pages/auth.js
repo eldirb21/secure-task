@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable curly */
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, AppState} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import ReactNativeBiometrics from 'react-native-biometrics';
 import {Icons, Texts} from '@components';
@@ -25,12 +25,22 @@ export default function Auth(props) {
   };
 
   useEffect(() => {
-    if (biometryTypes === 'None') {
-      simplePrompt();
-    }
+    const subscription = AppState.addEventListener('change', nextAppState => {
+      if (nextAppState === 'active') {
+        if (biometryTypes === 'None' || biometryTypes === null) {
+          simplePrompt();
+        }
+      }
+    });
+
+    return () => {
+      subscription.remove();
+    };
   }, [biometryTypes]);
 
   const simplePrompt = async () => {
+    setauthCanceled(false);
+
     rnBiometrics
       .simplePrompt({
         promptMessage: 'Biometric verification',
@@ -38,19 +48,14 @@ export default function Auth(props) {
       .then(result => {
         if (result.success) {
           setIsAuthenticated(true);
-          console.log('Authenticated successfully', result);
         } else if (result.error) {
           setauthCanceled(true);
-          console.error('Authentication failed', result.error);
         }
       })
-      .catch(error => {
-        console.error(error);
-      });
+      .catch(() => setauthCanceled(true));
   };
 
   const handleBiometric = () => {
-    console.log('press me');
     simplePrompt();
   };
 
@@ -63,7 +68,7 @@ export default function Auth(props) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Icons name="security" size={30} color={colors.bordered} />
+        <Icons name="lock" size={30} color={colors.buttonColor} />
         <View style={styles.devider} />
         <Texts>Secure Task Locked</Texts>
       </View>
@@ -72,7 +77,7 @@ export default function Auth(props) {
         {!authCanceled ? (
           <>
             <TouchableOpacity onPress={handleBiometric}>
-              <Icons name="fingerprint" size={80} color={colors.bordered} />
+              <Icons name="fingerprint" size={70} color={colors.bordered} />
             </TouchableOpacity>
             <View style={styles.devider} />
             <Texts>Touch the fingerprint sensor</Texts>
@@ -80,9 +85,9 @@ export default function Auth(props) {
         ) : (
           <>
             <Icons
-              type={'EvilIcons'}
-              name="exclamation"
-              size={60}
+              type="SimpleLineIcons"
+              name="info"
+              size={40}
               color={colors.danger}
             />
             <View style={styles.devider} />
