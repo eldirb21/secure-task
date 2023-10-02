@@ -36,7 +36,7 @@
 On the command prompt run the following commands
 
 ```sh
-$ git clone https://github.com/eramudeep/react-native-ecommerce.git
+$ git clone https://github.com/eldirb21/secure-task.git
 
 $ cd secure-task/
 
