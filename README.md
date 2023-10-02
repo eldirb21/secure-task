@@ -74,7 +74,7 @@ $ npm run android-releaseapk
 ```sh
 $ npm run test
 
-$ npm run test **tests**/folder_name
+$ npm run test __tests__/folder_name
 
-$ npm run test **tests**/folder_name/file_name.test.js
+$ npm run test __tests__/folder_name/file_name.test.js
 ```
