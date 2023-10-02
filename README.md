@@ -57,13 +57,13 @@ $ npm run ios
 $ npm run android
 ```
 
-#### 4 Clean Android
+#### 4. Clean Android
 
 ```sh
 $ npm run clean-android
 ```
 
-#### 5 Release Android
+#### 5. Release Android
 
 ```sh
 $ npm run android-releaseapk
