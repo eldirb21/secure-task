@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
   },
   message: {
     color: colors.white,
-    fontSize: 12,
     marginTop: 12,
   },
 });

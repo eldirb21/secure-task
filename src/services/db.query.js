@@ -4,6 +4,7 @@ const db_query = {
     title: ' VARCHAR(150)',
     subTitle: ' VARCHAR(150)',
     date: 'DATETIME',
+    checked: 'TEXT NOT NULL',
   },
 };
 export default db_query;

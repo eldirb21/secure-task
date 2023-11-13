@@ -12,6 +12,7 @@ export default function TaskForm({isupdated, ...props}) {
     date: '',
     title: '',
     subTitle: '',
+    checked: 0,
   });
 
   useEffect(() => {

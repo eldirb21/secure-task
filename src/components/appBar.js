@@ -32,7 +32,9 @@ export default function Appbar({
     <>
       <StatusBars />
       <View style={styles.homeContainer}>
-        <Texts style={styles.textTitle}>My Notes</Texts>
+        <Texts bold style={styles.textTitle}>
+          My Notes
+        </Texts>
         <Icons type="Ionicons" color="#000" name="person-circle" size={50} />
       </View>
       <View style={styles.searchContent}>
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 15,
+    opacity: 1,
   },
   homeContainer: {
     flexDirection: 'row',
@@ -84,6 +87,7 @@ const styles = StyleSheet.create({
   },
   searchContent: {
     marginBottom: 20,
+    // backgroundColor:'red'
   },
   items: {
     width: '7%',

@@ -12,6 +12,7 @@ const httpClient = {
       .join(', ');
 
     let query = `CREATE TABLE IF NOT EXISTS ${table} (${value})`;
+    // let query = `DROP TABLE IF EXISTS ${table}`;
 
     sqlite.transaction(txn => {
       txn.executeSql(

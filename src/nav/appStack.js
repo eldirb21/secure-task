@@ -19,7 +19,7 @@ const AppStack = () => {
         headerShown: false,
         cardStyle: styles.cardStyle,
       }}>
-      <Stack.Screen name="Auth" component={Auth} />
+      {/* <Stack.Screen name="Auth" component={Auth} /> */}
       <Stack.Screen name="Task" component={TaskList} />
       <Stack.Screen name="Detail" component={TaskDetails} />
       <Stack.Screen name="Form" component={TaskForm} />

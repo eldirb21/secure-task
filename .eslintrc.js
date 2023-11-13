@@ -5,7 +5,9 @@ module.exports = {
   rules: {
     'no-console': 0,
     'no-unused-vars': 1,
-    'babel/semi': 1,
+    'babel/semi': 0,
+    'dot-notation': 0,
+    curly: 0,
     // 'import/no-unresolved': 'off',
     // 'import/no-extraneous-dependencies': 'off',
     // 'import/order': 'off',

@@ -1,13 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
 import {View, StyleSheet} from 'react-native';
 import React from 'react';
-import colors from '@styles/colors';
+import colors from '../styles/colors';
 
-export default function Card({children, border}) {
+export default function Card({children, border, style}) {
   return (
     <View
       testID="default-card"
       style={[
+        style,
         styles.card,
         styles.shadow,
         {
@@ -33,11 +34,11 @@ const styles = StyleSheet.create({
   shadow: {
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 0,
     },
     shadowOpacity: 0.26,
     shadowRadius: 2,
 
-    elevation: 5,
+    // elevation: 2,
   },
 });
